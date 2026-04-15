@@ -1,5 +1,6 @@
 # workstation-setup
 # docker and k3s setup
+```sh
 
 sudo apt install -y curl wget git vim 
    43  df -h
@@ -60,3 +61,5 @@ sudo apt install -y curl wget git vim
    98  cat ~/.kube/config
    99  ls -altr ~/.kube/
   100  echo $KUBECONFIG
+```
+
