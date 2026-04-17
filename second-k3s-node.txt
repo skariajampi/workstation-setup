@@ -1,0 +1,26 @@
+# Install open-iscsi
+sudo apt update
+sudo apt install -y open-iscsi
+
+# Start and enable the service
+sudo systemctl enable --now iscsid
+
+# Verify it's working
+iscsiadm --version
+sudo systemctl status iscsid
+
+# Load required kernel module
+sudo modprobe iscsi_tcp
+echo "iscsi_tcp" | sudo tee -a /etc/modules
+
+#######
+
+curl -sfL https://get.k3s.io | K3S_URL=https://<DELL-IP>:6443 K3S_TOKEN=<TOKEN> sh -
+
+K100437d88b29bfc1e8b0c2b046023dadedbfbf521df090abba5da7cbe6b48b747b::server:4099267fbd7259297e6cc0464ae93c92
+
+192.168.1.96
+
+##########
+
+
