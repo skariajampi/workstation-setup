@@ -19,8 +19,10 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<DELL-IP>:6443 K3S_TOKEN=<TOKEN> 
 
 K100437d88b29bfc1e8b0c2b046023dadedbfbf521df090abba5da7cbe6b48b747b::server:4099267fbd7259297e6cc0464ae93c92
 
-192.168.1.96
-
+main workstation ip: 192.168.1.96
+this changed when router was re-started and second node would not communicate!
+Hence update the ip on the second node by updating the ip in the below file
+sudo nano /etc/systemd/system/k3s-agent.service.env
 ##########
 
 
